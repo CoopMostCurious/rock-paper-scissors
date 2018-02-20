@@ -64,12 +64,18 @@
         switch (choice) {
             case "paper":
             result_div.innerHTML = '<p>Paper covers rock! You win!!</p>';
+            document.getElementById(choice).classList.add('green-glow');
+            setTimeout(function () { document.getElementById(choice).classList.remove('green-glow'); }, 3000);
             break;
             case 'scissors':
             result_div.innerHTML = '<p>Scissors cut paper! You win!!</p>';
+            document.getElementById(choice).classList.add('green-glow');
+            setTimeout(function () { document.getElementById(choice).classList.remove('green-glow');}, 3000);
             break;
             case 'rock':
             result_div.innerHTML = '<p>Rock breaks scissors! You win!!</p>';
+            document.getElementById(choice).classList.add('green-glow');
+            setTimeout(function () { document.getElementById(choice).classList.remove('green-glow');}, 3000);
             break;
         }
     }
@@ -80,12 +86,18 @@
         switch (computerChoice) {
             case 'paper':
             result_div.innerHTML = '<p>Rocks get covered by paper! You lose!!</p>';
+            document.getElementById(computerChoice).classList.add('red-glow');
+            setTimeout(function () { document.getElementById(computerChoice).classList.remove('red-glow');}, 3000);
             break;
             case 'scissors':
             result_div.innerHTML = '<p>Paper gets cut by scissors! You lose!!</p>';
+            setTimeout(function () { document.getElementById(computerChoice).classList.remove('red-glow');}, 3000);
+            document.getElementById(computerChoice).classList.add('red-glow');
             break;
             case 'rock':
             result_div.innerHTML = '<p>Scissors get broken by rock! You lose!!</p>';
+            document.getElementById(computerChoice).classList.add('red-glow');
+            setTimeout(function () { document.getElementById(computerChoice).classList.remove('red-glow');}, 3000);
             break;
         }
     }
